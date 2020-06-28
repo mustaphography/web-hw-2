@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomePage</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <link
+      rel="icon"
+      href="assets/pics/dreamworks-animation-dreamworks-logo-11563027999vsb4jok7jf.png"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="./homepage.html">
+          <h4>Mufasa</h4>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="./homepage.html">Home</a></li>
+        <li><a href="./movies.html">Movies</a></li>
+        <li><a href="./Tv shows.html">Tv shows</a></li>
+      </ul>
+    </nav>
+    <br />
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 12</div>
+        <img src="./assets/pics/mufasa.jpg" style="width: 100%;" />
+        <div class="text">Lion King { Mufasa }</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 12</div>
+        <img src="./assets/pics/inception wide.jpg" style="width: 100%;" />
+        <div class="text">Inception</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 12</div>
+        <img src="./assets/pics/the revenant.png" style="width: 100%;" />
+        <div class="text">The Revenant</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 12</div>
+        <img
+          src="./assets/pics/the-dark-knight-1200.jpg"
+          style="width: 100%;"
+        />
+        <div class="text">The Dark Knight</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 12</div>
+        <img
+          src="./assets/pics/interstellar-poster 2.jpg"
+          style="width: 100%;"
+        />
+        <div class="text">Interstellar</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">6 / 12</div>
+        <img src="./assets/pics/rush.jpg" style="width: 100%;" />
+        <div class="text">Rush</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">7 / 12</div>
+        <img src="./assets/pics/got wall paper.jpg" style="width: 100%;" />
+        <div class="text">Game Of Thrones</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">8 / 12</div>
+        <img src="./assets/pics/laca sa.jpg" style="width: 100%;" />
+        <div class="text">Laca sa De Papel</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">9 / 12</div>
+        <img src="./assets/pics/love death robots.jpg" style="width: 100%;" />
+        <div class="text">Love, Death and Robots</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">10 / 12</div>
+        <img src="./assets/pics/sherlock.jpg" style="width: 100%;" />
+        <div class="text">Sherlock</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">11 / 12</div>
+        <img src="./assets/pics/vikings.jpg" style="width: 100%;" />
+        <div class="text">Vikings</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">12 / 12</div>
+        <img src="./assets/pics/rick and morty.png" style="width: 100%;" />
+        <div class="text">Rick and Morty</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    </div>
+    <br />
+
+    <div style="text-align: center;">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+      <span class="dot" onclick="currentSlide(5)"></span>
+      <span class="dot" onclick="currentSlide(6)"></span>
+      <span class="dot" onclick="currentSlide(7)"></span>
+      <span class="dot" onclick="currentSlide(8)"></span>
+      <span class="dot" onclick="currentSlide(9)"></span>
+      <span class="dot" onclick="currentSlide(10)"></span>
+      <span class="dot" onclick="currentSlide(11)"></span>
+      <span class="dot" onclick="currentSlide(12)"></span>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+  </body>
+  <br />
+  <footer>
+    <br />
+    <div class="sc">
+      <div class="insta">
+        <a href="http://instagram.com" target="_blank">
+          <img class="icon1" src="assets/icons/Instagram-Icon.png" />
+        </a>
+      </div>
+      <div class="twitter">
+        <a href="http://twitter.com" target="_blank">
+          <img class="icon1" src="assets/icons/twitter_circle-512.png" />
+        </a>
+      </div>
+    </div>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111402.61240808379!2d-21.99252264156403!3d64.13342312733178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674b9eedcedc3%3A0xec912ca230d26071!2sReykjav%C3%ADk%2C%20Iceland!5e0!3m2!1sen!2skw!4v1593292595420!5m2!1sen!2skw"
+    ></iframe>
+  </footer>
+</html>
